@@ -1,0 +1,169 @@
+<html>
+<title>Poll Creation</title>
+
+<style>
+  
+.form{
+	background:#f1f1f1; width:470px; margin:0 auto; padding-left:50px; padding-top:20px;
+}
+.form fieldset{border:0px; padding:0px; margin:0px;}
+.form p.contact { font-size: 12px; margin:0px 0px 10px 0;line-height: 14px; font-family:Arial, Helvetica;}
+.form input[type="text"] { width: 400px; }
+.forminput[type="password"] { width: 400px; }
+.form input.startdate{width:60px;}
+.form input.startyear{width:120px;}
+.form label { color: #000; font-weight:bold;font-size: 12px;font-family:Arial, Helvetica; }
+.form label.startmonth {width: 135px;}
+.form input.enddate{width:60px;}
+.form input.endyear{width:120px;}
+.form label { color: #000; font-weight:bold;font-size: 12px;font-family:Arial, Helvetica; }
+.form label.endmonth {width: 135px;}
+.form input, textarea { background-color: rgba(255, 255, 255, 0.4); border: 1px solid rgba(122, 192, 0, 0.15); padding: 7px; font-family: Keffeesatz, Arial; color: #4b4b4b; font-size: 14px; -webkit-border-radius: 5px; margin-bottom: 15px; margin-top: -10px; }
+.form input:focus, textarea:focus { border: 1px solid #ff5400; background-color: rgba(255, 255, 255, 1); }
+
+.form .voting {
+  width:410px;background-color: rgba(255, 255, 255, 0.4); border: 1px solid rgba(122, 192, 0, 0.15); padding: 7px; font-family: Keffeesatz, Arial; color: #4b4b4b; font-size: 14px; -webkit-border-radius: 5px; margin-bottom: 15px; margin-top: -10px;
+  
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none; 
+    -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 0px solid #FFF;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
+.form input.buttom{ background: #4b8df9; display: inline-block; padding: 5px 10px 6px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222; border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;}
+.form input.buttom:hover	{ background-color: #023b97; }
+.form h1{
+     font-size: 36px;
+	line-height: 40px;
+	margin: 1em 0 .6em 0;
+	font-weight: normal;
+	color: white;
+	font-family: 'Hammersmith One', sans-serif;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+	position: relative;
+	color: #6Cf;
+  }
+
+
+</style>
+<body>
+<div  class="form">
+  <head><h1>Creation</h1></head>
+    		<form id="contactform"> 
+    			<p class="contact"><label for="title">Title</label></p> 
+    			<input id="itle" name="title" placeholder="Question or title" required="" tabindex="1" type="text"> 
+
+    			<p class="contact"><label for="org">Organiser</label></p> 
+    			<input id="org" name="org"placeholder="Name of the organiser" required="" type="text"> 
+          
+          
+          <p class="voting"><label for="voting"><br>Choose How Voters will vote</br></label></p> 
+          <select class="voting" name="voting">
+			
+            <option value="voting">voting Methods</option>
+            <option value="s">Single Selection</option>
+            <option value="m">Multiple Selection</option>
+            <option value="p">Multi-option point System</option>
+            </select><br>
+
+            
+      
+      
+            <p class="opt1"><label for="opt1">Option 1</label></p> 
+            <input id="opt1" name="opt1"placeholder="enter first Option " required="" type="text"> 
+            <p class="opt2"><label for="opt2">Option 2</label></p> 
+            <input id="opt2" name="opt2"placeholder="enter second Option " required="" type="text"> 
+ 
+               <fieldset>
+                <label>
+                  Choose a starting date:
+                  <input type="date" name="startdate" min="2020-11-26" max="2022-04-20" required>
+                  <span class="startdate"></span>
+                </label>
+                  
+                 <!--<label>Start Day </label>
+                  <label class="startmonth"> 
+                  <select class="select-style" name="startMonth">
+                  <option value="">Month</option>
+                  <option  value="01">January</option>
+                  <option value="02">February</option>
+                  <option value="03" >March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12" >December</option>
+                  </label>
+                 </select>    
+                <label>Day<input class="startdate" maxlength="2" name="startdate"  placeholder="Day" required=""></label>
+                <label>Year <input class="startyear" maxlength="4" name="startYear" placeholder="Year" required=""></label>-->
+              </fieldset>
+
+<fieldset>
+                 
+  <lable>End Date:
+  <input type="date" name="enddate" min="2020-11-26" max="2022-04-20" required>
+  <span class="enddate"></span>
+</label>
+
+                  <!--
+                    <label>End Day </label>
+                    <label class="month"> 
+                  <select class="select-style" name="endmonth">
+                  <option value="">Month</option>
+                  <option  value="01">January</option>
+                  <option value="02">February</option>
+                  <option value="03" >March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12" >December</option>
+                  </label>
+                 </select>    
+                <label>Day<input class="enddate" maxlength="2" name="enddate"  placeholder="Day" required=""></label>
+                <label>Year <input class="endyear" maxlength="4" name="endYear" placeholder="Year" required=""></label>-->
+              </fieldset>
+			  
+
+                <p class="contact"><label for="username">Create a username</label></p> 
+    			<input id="username" name="username" placeholder="username" required="" tabindex="2" type="text"> 
+
+              <p class="contact"><label for="phone">Mobile phone</label></p> 
+            <input id="phone" name="phone" placeholder="phone number" required="" type="text"> <br>
+            
+			
+                <p class="contact"><label for="password">Create a password</label></p> 
+    			<input type="password" id="password" name="password" required="" type="text"> 
+                <p class="contact"><label for="repassword">Confirm your password</label></p> 
+    			<input type="password" id="password" name="password" required="" type="text"> 
+
+			<input class="buttom" name="crt" id="crt" tabindex="6" value="Create!" type="submit"> 
+
+            
+
+            	 
+   </form> 
+</div>
+</body>
+</html>
