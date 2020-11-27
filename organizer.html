@@ -78,7 +78,6 @@
             <option value="p">Multi-option point System</option>
             </select><br>
 
-            
       
       
             <p class="opt1"><label for="opt1">Option 1</label></p> 
@@ -89,10 +88,29 @@
                <fieldset>
                 <label>
                   Choose a starting date:
-                  <input type="date" name="startdate" min="2020-11-26" max="2022-04-20" required>
+                  <input type="date" name="startdate" min="" max="2022-04-20" required id="f1">
                   <span class="startdate"></span>
                 </label>
                   
+            <script>
+                    function formatDate(date) {
+                    var d = new Date(date),
+                    month = '' + (d.getMonth() + 1),
+                    day = '' + d.getDate(),
+                    year = d.getFullYear();
+
+                    if (month.length < 2) 
+                    month = '0' + month;
+                    if (day.length < 2) 
+                    day = '0' + day;
+
+                    return [year, month, day].join('-');
+                    }
+              var cal = document.getElementById("f1");
+              console.log(cal);
+              cal.setAttribute('min',formatDate(new Date()))
+              console.log(cal.getAttribute('min'));
+              </script>
                  <!--<label>Start Day </label>
                   <label class="startmonth"> 
                   <select class="select-style" name="startMonth">
